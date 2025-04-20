@@ -57,6 +57,8 @@ main{
 }
 .emoji{
     display: block;
+    font-size: 40px;
+    
 }
 .temperature{
     font-size: 88px;
