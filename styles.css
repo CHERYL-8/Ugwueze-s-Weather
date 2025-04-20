@@ -53,23 +53,19 @@ main{
     color:#006d2c;
 }
 .weather-container{
-     position: relative;
-     top: -8px;
-     font-size: 40px;
-     margin-right: 10px;
+     display: flex;
 }
 .emoji{
-    font-size: 44px;
-    margin-top: 22px;
+    display: block;
 }
 .temperature{
-    font-size: 85px;
-    margin-left: 10px;
+    font-size: 88px;
+    line-height: 88px;
     font-weight: 500;
 }
 .unit{
-    margin-top: 16px;
-    font-size: 30px;
+    margin-top: 6px;
+    font-size: 28px;
 }
 a{
     color: #006d2c;
