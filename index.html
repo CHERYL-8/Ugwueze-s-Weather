@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Playwrite+US+Modern:wght@100..400&display=swap"rel="stylesheet">
     <link rel="stylesheet" href="styles.css"/>
     <title>udidi-ubochi</title>
 </head>
@@ -10,20 +13,26 @@
     <div class="container">
     <header>
         <form>
-            <input type="search" placeholder="Enter a city...." required />
-            <input type="submit" value="search" />
+            <input type="search" placeholder="Enter a city...." required class="city-search"/>
+            <input type="submit" value="search" class="submit-button" />
         </form>
     </header>
     <main>
+        <div class="weather-info">
         <div>
-            <h1>Enugu</h1>
-            <P>
+            <h1 class="weather">Enugu</h1>
+            <P class="weather-details">
                 Friday 00:01,scattered clouds
                 <br />
-                Humidity: 66%, Wind:2.14km/h
+                Humidity: <strong>66%</strong>, Wind: <strong>2.14km/h</strong>
             </p>
         </div>
-        <div>⛅13°<sup>C</sup></div>
+        <div class="weather-container">
+        <div class="emoji">⛅</div>
+        <div class="temperature">13</div>
+        <div class="unit">°C</div>
+        </div>
+        </div>
     </main>
     <footer>
         This project was coded by
