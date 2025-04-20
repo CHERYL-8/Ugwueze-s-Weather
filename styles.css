@@ -53,9 +53,10 @@ main{
     color:#006d2c;
 }
 .weather-container{
-    position: relative;
-    top: -10px;
-    left:20px;
+     position: relative;
+     top: -8px;
+     font-size: 40px;
+     margin-right: 10px;
 }
 .emoji{
     font-size: 44px;
