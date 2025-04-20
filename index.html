@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Playwrite+US+Modern:wght@100..400&display=swap"rel="stylesheet">
     <link rel="stylesheet" href="styles.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>udidi-ubochi</title>
 </head>
 <body>
@@ -20,7 +21,7 @@
     <main>
         <div class="weather-info">
         <div>
-            <h1 class="weather" id="city-weather">Enugu</h1>
+            <h1 class="weather" id="city-weather"></h1>
             <P class="weather-details">
                 Friday 00:01,scattered clouds
                 <br />
@@ -29,7 +30,7 @@
         </div>
         <div class="weather-container">
         <div class="emoji">⛅</div>
-        <div class="temperature">13</div>
+        <div class="temperature" id="temperature"></div>
         <div class="unit">°C</div>
         </div>
         </div>
