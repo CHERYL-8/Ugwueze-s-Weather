@@ -12,7 +12,7 @@ function updateWeather (response) {
     time.innerHTML = formatDate(date);
     cloudDetails.innerHTML = response.data.condition.description;
     humdity.innerHTML = `${response.data.temperature.humidity}%`;
-    wind.innerHTML = `${response.data.wind.speed}km/h;
+    wind.innerHTML = `${response.data.wind.speed}km/h`;
     temperatureElement.innerHTML= Math.round(temperature);
     emoji.innerHTML = `<img src="${response.data.condition.icon_url}" class="emoji" />`;
     
