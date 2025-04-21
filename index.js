@@ -1,5 +1,4 @@
 function updateWeather (response) {
-    console.log(response.data)
     let temperatureElement = document.querySelector("#temperature");
     let temperature = response.data.temperature.current;
     let cityWeather = document.querySelector("#city-weather");
@@ -19,5 +18,5 @@ function handleSearchSubmit(event) {
     searchCity(cityInput.value);
 }
 let searchTabELement = document.querySelector("#search-tab");
-searchTabElement.addEventListener("submit,handleSearchSubmit");
+searchTabElement.addEventListener("submit", handleSearchSubmit);
 searchCity("Enugu");
