@@ -55,9 +55,8 @@ main{
      display: flex;
 }
 .emoji{
-    display: block;
-    font-size: 50px;
-    
+    font-size: 88px;
+    line-height: 88px;    
 }
 .temperature{
     font-size: 88px;
