@@ -16,7 +16,6 @@ function updateWeather (response) {
     temperatureElement.innerHTML= Math.round(temperature);
     emoji.innerHTML = `<img src="${response.data.condition.icon_url}" class="emoji" />`;
     
-
 }
 function formatDate (date) {
   let minutes = date.getMinutes();
