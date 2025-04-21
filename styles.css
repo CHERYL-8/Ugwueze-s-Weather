@@ -48,7 +48,7 @@ main{
     line-height: 26px;
     font-weight: 600;
 }
-.weather-details strong{
+strong{
     color: rgb(255, 219, 88,);
 }
 .weather-container{
