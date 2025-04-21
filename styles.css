@@ -45,12 +45,11 @@ main{
 }
 .weather-details{
     font-size: 15px;
-    color: rgb(255, 219, 88,);
     line-height: 26px;
     font-weight: 600;
 }
 .weather-details strong{
-    color:#006d2c;
+    color: rgb(255, 219, 88,);
 }
 .weather-container{
      display: flex;
