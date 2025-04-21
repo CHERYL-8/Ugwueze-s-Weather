@@ -3,7 +3,7 @@ function updateWeather (response) {
     let temperature = response.data.temperature.current;
     let cityWeather = document.querySelector("#city-weather");
     let cloudDetails = document.querySelector("#cloud-details");
-    let humidity = document.querySelector("#humidity");
+    let humidityElement = document.querySelector("#humidity");
     let wind = document.querySelector("#wind");
     let time = document.querySelector("#time");
     let date = new Date(response.data.time * 1000);
@@ -11,11 +11,11 @@ function updateWeather (response) {
     cityWeather.innerHTML = response.data.city;
     time.innerHTML = formatDate(date);
     cloudDetails.innerHTML = response.data.condition.description;
-    humdity.innerHTML = `${response.data.temperature.humidity}%`;
+    humdityElement.innerHTML = `${response.data.temperature.humidity}%`;
     wind.innerHTML = `${response.data.wind.speed}km/h`;
     temperatureElement.innerHTML= Math.round(temperature);
     emoji.innerHTML = `<img src="${response.data.condition.icon_url}" class="emoji" />`;
-    
+
 }
 function formatDate (date) {
   let minutes = date.getMinutes();
