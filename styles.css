@@ -49,7 +49,7 @@ main{
     font-weight: 600;
 }
 .weather-details strong{
-    color: #ffdb58;
+    color: #ffa500;
 }
 .weather-container{
      display: flex;
