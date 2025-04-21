@@ -17,6 +17,6 @@ function handleSearchSubmit(event) {
     
     searchCity(cityInput.value);
 }
-let searchTabELement = document.querySelector("#search-tab");
-searchTabElement.addEventListener("submit", handleSearchSubmit);
+let searchTab = document.querySelector("#search-tab");
+searchTab.addEventListener("submit", handleSearchSubmit);
 searchCity("Enugu");
