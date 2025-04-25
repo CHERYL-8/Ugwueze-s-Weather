@@ -90,6 +90,9 @@ main{
     display: flex;
     justify-content: center;
 }
+.forecast-temperature {
+    padding: 0 10px;
+}
 a{
     color: #006d2c;
 }
