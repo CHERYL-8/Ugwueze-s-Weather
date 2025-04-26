@@ -1,9 +1,15 @@
 body{
-    background: rgb(161, 217, 155);
+    background-image: url("https://images.unsplash.com/photo-1463043254199-7a3efd782ad1?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(161, 217, 155);
     font-family:  "Arimo", sans-serif;
 }
 .container{
-    background: #c7e9c0;
+    background-image: url("https://images.unsplash.com/photo-1543157145-f78c636d023d?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #c7e9c0;
     max-width: 600px;
     margin: 30px auto;
     box-shadow: 0 25px 50px rgba(161, 217, 155,0.08);
@@ -80,8 +86,10 @@ main{
     margin-bottom: 10px;
 }
 .forecast-icon{
-    font-size: 38px;
-    text-align: center;
+    width: 88px;
+    height: 88px;
+    display: block;
+    margin: 0 auto;
 }
 .forecast-temperatures{
     text-align: center;

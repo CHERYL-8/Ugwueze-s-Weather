@@ -15,7 +15,7 @@ function updateWeather (response) {
     wind.innerHTML = `${response.data.wind.speed}km/h`;
     temperatureElement.innerHTML= Math.round(temperature);
     emoji.innerHTML = `<img src="${response.data.condition.icon_url}" class="emoji" />`;
-
+   getForecast(response.data.city);
 }
 function formatDate (date) {
   let minutes = date.getMinutes();
@@ -46,22 +46,34 @@ function handleSearchSubmit(event) {
     
     searchCity(cityInput.value);
 }
-function displayForecast() {
-  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"];
+  return days[date.getDay()];
+}
+function getForecast(city) {
+  let apiKey = "c8c71f823b69ab4b8b86o3a0f1d320t8";
+  let apiUrl =
+    `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+function displayForecast(response) {
   let forecastHtml = "";
-  days.forEach(function(day){
-    forecastHtml =
-     forecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if( index < 5){
+      forecastHtml =
+        forecastHtml +
+        `
    <div class="forecast-day">
-   <div class="forecast-date">${day}</div>
-    <div class="forecast-icon">☁</div>
+   <div class="forecast-date">${formatDay(day.time)}</div>
+    <img src="${day.condition.icon_url}" class="forecast-icon"/>
       <div class="forecast-temperatures">
-       <div class="forecast-temperature"><strong>14°</strong></div>
-          <div class="forecast-temperature">7°</div>
+       <div class="forecast-temperature"><strong>${Math.round(day.temperature.maximum)}°</strong></div>
+          <div class="forecast-temperature">${Math.round(day.temperature.minimum)}°</div>
     </div>
     </div>
 `;
+    }
   });
   let forecastElement = document.querySelector("#forecast"); 
   forecastElement.innerHTML = forecastHtml;
@@ -69,4 +81,3 @@ function displayForecast() {
 let searchTab = document.querySelector("#search-tab");
 searchTab.addEventListener("submit", handleSearchSubmit);
 searchCity("Enugu");
-displayForecast();
